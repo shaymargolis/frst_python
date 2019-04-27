@@ -63,12 +63,12 @@ def frst(img, radii, alpha, beta, stdFactor, mode='BOTH'):
       i, j = coords
       #Positively affected pixel
       if bright:
-        ppve = (i+gpx[i,j], j+gpy[i,j])
+        ppve = (i+gpy[i,j], j+gpx[i,j])
         O_n[ppve] += 1
         M_n[ppve] += gnorm
       #Negatively affected pixel
       if dark:
-        pnve = (i-gpx[i,j], j-gpy[i,j])
+        pnve = (i-gpy[i,j], j-gpx[i,j])
         O_n[pnve] -= 1
         M_n[pnve] -= gnorm
 
